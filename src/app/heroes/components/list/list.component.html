@@ -1,0 +1,11 @@
+<h1>Lista de heroes</h1>
+<h3 *ngIf="heroeBorrado;else otro">{{heroeBorrado}}</h3>
+<ng-template #otro>
+    <h3>No hay nada</h3>
+</ng-template>
+
+<ul class="mt-2 list-group">
+    <li *ngFor="let item of list">{{item}}</li>
+</ul>
+
+<button *ngIf="list.length > 0" (click)="deleteItem()">Delete one</button>

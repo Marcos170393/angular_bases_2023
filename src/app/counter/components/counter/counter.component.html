@@ -1,0 +1,14 @@
+<div>
+
+    <h1 *ngIf="counter<=10;else alternate">El counter</h1>
+    <ng-template #alternate>
+        <h1>Pasaron los 10!</h1>
+    </ng-template>
+    <p>
+        {{counter}}
+    </p>
+    <button (click)="sumar()">Sumar</button>
+    <button (click)="restar()">Restar</button>
+    <button (click)="reset()">Resetear</button>
+    
+</div>
