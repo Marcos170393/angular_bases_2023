@@ -1,0 +1,14 @@
+<h3 class="text-secondary">Ingresar nuevo heroe</h3>
+<form class="form" (submit)="saveCharacter()">
+    <div>
+        <label  class="form-label" for="nombre">Nombre del heroe</label>
+        <input [(ngModel)]="character.name" id="nombre" class="form-control" type="text" name="name">
+    </div>
+    <div>
+        <label class="form-label" for="poder">Poder del heroe</label>
+        <input [(ngModel)]="character.power" id="poder" class="form-control" type="number" name="power">
+    </div>
+    <button type="submit" class="btn btn-primary m-2">
+        Agregar
+    </button>
+</form>
